@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Alert</title>
+</head>
+<body>
+    <button class="btn">Button 1</button>
+    <button class="btn">Button 2</button>
+    <button class="btn">Button 3</button>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            let buttons = document.querySelectorAll(".btn");
+            
+
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    alert("Button clicked: " + this.innerText);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
